@@ -46,7 +46,8 @@ def employer_edit(request, employer_id):
         request,
         EmployerForm,
         'staff/employer_form.html',
-        'staff:employer_list', instance_id=employer_id,
+        'staff:employer_list',
+        instance_id=employer_id,
     )
 
 
@@ -55,7 +56,7 @@ def employer_remove(request, employer_id):
         request,
         Employer,
         'staff:employer_list',
-        employer_id,
+        instance_id=employer_id,
     )
 
 
@@ -94,5 +95,5 @@ def position_remove(request, position_id):
         request,
         Position,
         'staff:positions_list',
-        position_id,
+        instance_id=position_id,
     )
