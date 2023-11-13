@@ -16,7 +16,7 @@ class Position(models.Model):
 
 
 class Employer(models.Model):
-    """Model Employers"""
+    """Model Employers."""
     name = models.CharField(
         max_length=100,
         blank=False,
