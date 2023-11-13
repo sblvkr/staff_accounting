@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Position List{% endblock %}
+
+{% block header %}List of Positions{% endblock %}
+
+{% block content %}
+    <a href="{% url 'staff:employer_list' %}">Employer list</a></br>
+    <a href="{% url 'staff:position_create' %}">Create Position</a>
+    <ul>
+        {% for position in positions %}
+            <li>{{ forloop.counter }} - {{ position.title }}
+                <a href="{% url 'staff:position_edit' position.id %}">Edit</a>
+                <a href="{% url 'staff:position_remove' position.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

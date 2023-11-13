@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Employer List{% endblock %}
+
+{% block header %}List of Employers{% endblock %}
+
+{% block content %}
+    <a href="{% url 'staff:positions_list' %}">Positions list</a></br>
+    <a href="{% url 'staff:employer_create' %}">Create Employer</a>
+    <ul>
+        {% for employer in employers %}
+            <li>{{ forloop.counter }} - {{ employer.surname }} {{ employer.name }} {{ employer.patronymic }} (id: {{ employer.id }}) ({{ employer.position.title }})
+                <a href="{% url 'staff:employer_edit' employer.id %}">Edit</a>
+                <a href="{% url 'staff:employer_remove' employer.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
