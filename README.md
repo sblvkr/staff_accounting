@@ -1,7 +1,7 @@
 <h1 align="center">Staff Accounting</h1>
 
 ## Demo
-API: [https://test_cortex.thesml.fun/](https://test_cortex.thesml.fun/)
+Site: [http://109.107.190.191/](http://109.107.190.191/)
 
 ## Tech stack
 1. Python 3.11
@@ -17,22 +17,22 @@ API: [https://test_cortex.thesml.fun/](https://test_cortex.thesml.fun/)
 2. Clone the repo
 
     ```sh
-    $ git clone https://github.com/sblvkr/staff_accounting.git
-    $ cd backend
+    git clone https://github.com/sblvkr/staff_accounting.git
+    cd staff_accounting
     ```
 
 3. Create environment to the example(.env.example).
 
    For a quick start, you only need to add SECRET_KEY. Use the service [djecrety.ir](https://djecrety.ir/) (or similar) to create it.
    ```sh
-    $ cp .env.example .env
-    $ nano/vim .env
+    cp .env.example .env
+    nano/vim .env
     ```
 
 4. Run
 
     ```sh
-    $ docker compose -f docker-compose.dev.yml up
+    docker compose -f docker-compose.dev.yml up
     ```
 
 ## About me
